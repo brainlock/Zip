@@ -1,0 +1,16 @@
+framework module Zip {
+  umbrella header "Zip.h"
+
+  export *
+  module * { export * }
+
+  explicit module minizip {
+    header "crypt.h"
+    header "zip.h"
+    header "unzip.h"
+    header "ioapi.h"
+
+    link "minizip"
+    export *
+  }
+}
